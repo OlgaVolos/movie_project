@@ -7,7 +7,6 @@ import {movieActions} from "../../redux";
 
 const MovieListCards = () => {
     const {movies} = useSelector(state => state.movies);
-    const {genreList} = useSelector(state => state.genreList)
     const [query, setQuery] = useSearchParams({page:'1', with_genres:''});
     const dispatch = useDispatch();
     const page = query.get('page');
