@@ -5,7 +5,6 @@ const LeftBar = () => {
     return (
         <div className={css.leftBar}>
             <GenreList/>
-            hello
         </div>
     );
 };

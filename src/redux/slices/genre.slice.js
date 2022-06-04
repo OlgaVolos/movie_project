@@ -1,10 +1,12 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {genreService} from "../../services";
 
-const initialState ={
-    genreList:[],
-    page:null,
-    with_genres: null
+const initialState = {
+    genreList: [],
+    page: 1,
+    genre: null,
+    id: null
+
 };
 
 const getGenres = createAsyncThunk(
@@ -18,8 +20,13 @@ const getGenres = createAsyncThunk(
 const genreSlice = createSlice({
     name: 'genreSlice',
     initialState,
-    reducers:{},
-    extraReducers:(builder) => {
+    reducers: {
+        setGenreId: (state, action) => {
+            state.id = action.payload
+        }
+
+    },
+    extraReducers: (builder) => {
         builder
             .addCase(getGenres.fulfilled, (state, action) => {
                 const {genres} = action.payload;
@@ -28,10 +35,11 @@ const genreSlice = createSlice({
     }
 });
 
-const {reducer: genreReducer, actions:{}} = genreSlice;
+const {reducer: genreReducer, actions: {setGenreId}} = genreSlice;
 
 const genreActions = {
-getGenres
+    getGenres,
+    setGenreId
 };
 
 export {

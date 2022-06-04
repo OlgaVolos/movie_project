@@ -19,6 +19,9 @@
 .card:active{
     filter: blur(1px);
 }
+.card:hover{
+    box-shadow: 0 0 8px 3px #4484C4;
+}
 a{
     text-decoration: none;
     color: black;

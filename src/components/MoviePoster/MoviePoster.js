@@ -2,7 +2,9 @@ import React from 'react';
 import {urls} from "../../constants";
 
 const MoviePoster = ({movie}) => {
-const {original_title, overview, title, vote_average, poster_path, release_date} = movie
+const {original_title, overview, title, vote_average, poster_path, release_date} = movie;
+
+
 
     return (
         <div style={{display: 'flex'}}>
