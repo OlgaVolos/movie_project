@@ -3,5 +3,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: darkblue;
+    background: #43438a;
+}
+.header_btn {
+    height: 50px;
+    width: 195px;
+    margin: 15px;
+    background: #6767be;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.header_btn:hover{
+    box-shadow: 0 0 8px 3px #4484C4;
 }

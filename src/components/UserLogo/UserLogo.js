@@ -1,6 +1,7 @@
 import React from 'react';
 
 import css from './UserLogo.module.css'
+
 const UserLogo = () => {
     return (
         <div className={css.user_wrap}>

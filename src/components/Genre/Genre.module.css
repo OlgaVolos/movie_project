@@ -1,5 +1,10 @@
-.genre_btn{
+.genre_btn {
     height: 50px;
     width: 200px;
-
+    margin: 2px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.genre_btn:hover{
+    box-shadow: 0 0 8px 3px #4484C4;
 }

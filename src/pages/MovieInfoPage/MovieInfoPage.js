@@ -14,12 +14,12 @@ const MovieInfoPage = () => {
     const [movie, setMovie] = useState(state)
 
     useEffect(() => {
-        if(!state){
+        if (!state) {
             dispatch(movieActions.getMovie({id}))
         } else {
             setMovie(state)
         }
-    }, [state, id])
+    }, [state, id, dispatch])
     return (
         <div>
             {movie && <MoviePoster movie={movie}/>}

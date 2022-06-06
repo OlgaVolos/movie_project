@@ -1,6 +1,8 @@
 import React from 'react';
-import css from './LeftBar.module.css'
+
 import {GenreList} from "../GenreList/GenreList";
+import css from './LeftBar.module.css';
+
 const LeftBar = () => {
     return (
         <div className={css.leftBar}>

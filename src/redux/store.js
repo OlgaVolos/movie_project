@@ -1,10 +1,12 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 
 import {genreReducer, movieReducer} from "./slices";
+import {themeReducer} from "./slices/theme.slice";
 
 const rootReducer = combineReducers({
     movies: movieReducer,
-    genres: genreReducer
+    genres: genreReducer,
+    theme: themeReducer
 });
 
 const store = configureStore({

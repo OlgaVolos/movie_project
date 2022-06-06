@@ -1,4 +1,5 @@
 import axios from "axios";
+
 import {baseURL} from "../constants";
 
 const axiosService = axios.create({
@@ -7,7 +8,6 @@ const axiosService = axios.create({
         'Authorization': `Bearer ${process.env.REACT_APP_API_KEY}`
     }
 })
-
 
 export {
     axiosService

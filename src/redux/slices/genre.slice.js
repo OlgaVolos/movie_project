@@ -4,9 +4,7 @@ import {genreService} from "../../services";
 const initialState = {
     genreList: [],
     page: 1,
-    genre: null,
-    id: null
-
+    searchGenres: [],
 };
 
 const getGenres = createAsyncThunk(
@@ -21,10 +19,16 @@ const genreSlice = createSlice({
     name: 'genreSlice',
     initialState,
     reducers: {
-        setGenreId: (state, action) => {
-            state.id = action.payload
-        }
-
+        searchGenreIds: (state, action) => {
+            const {searchGenres} = state.genres
+            return {
+                ...state,
+                searchGenres:
+                state.searchGenres.includes(action.payload)?
+                    searchGenres.filter(genreId => genreId !== action.payload) :
+                    [...searchGenres, action.payload]
+            }
+        },
     },
     extraReducers: (builder) => {
         builder
@@ -35,11 +39,11 @@ const genreSlice = createSlice({
     }
 });
 
-const {reducer: genreReducer, actions: {setGenreId}} = genreSlice;
+const {reducer: genreReducer, actions: {searchGenreIds}} = genreSlice;
 
 const genreActions = {
     getGenres,
-    setGenreId
+    searchGenreIds
 };
 
 export {

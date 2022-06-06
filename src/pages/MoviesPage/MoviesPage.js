@@ -1,14 +1,16 @@
 import React from 'react';
-import {MovieListCards} from "../../components";
 import {Outlet} from "react-router-dom";
 
+import {MovieListCards} from "../../components";
+
 const MoviesPage = () => {
+
     return (
         <div>
-            <MovieListCards/>
+            <MovieListCards />
             <Outlet/>
         </div>
     );
-};
+}
 
 export {MoviesPage};
