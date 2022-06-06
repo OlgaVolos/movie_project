@@ -4,6 +4,8 @@ import {MainLayout} from "./layouts";
 import {MovieListCards} from "./components";
 import {MovieInfoPage, NotFoundPage} from "./pages";
 
+import css from './App.module.css';
+
 function App() {
 
   return (
